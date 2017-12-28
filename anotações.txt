@@ -1,0 +1,34 @@
+Saber: Dano físico e armadura
+Archer: Dano e buff físico
+Rider: Velocidade e esquiva
+Lancer: Habilidades de dano físico
+Caster: Habilidades e dano mágico
+Berserker: Vida e regen
+Assassin: Roubo de vida e mana
+
+Algumas magias ignoram velocidade
+Ignore = True
+ou seja, não podem ser esquivadas
+
+
+Saber
+Archer
+Rider Reflete dano absorvido pela armadura
+Todo ataque do lancer da debuff na vida
+Caster 
+Berserker tem mana leech por % de dano causado
+Assassin tem chance de dar one hit KO
+
+
+
+Passos da batalha:
+Check if player has enough mana... if yes: else error
+Check if Spell ignores speed... if not then:
+Check Speed
+If hits...: else misses...
+Check If Critical Hit...: Critical hits have 2x damage
+Calculates damage
+Decreases Mana
+
+Add Buffs and Debuffs
+

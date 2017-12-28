@@ -1,0 +1,15 @@
+
+  Warrior -> Knight
+   Archer -> Hunter
+    Thief -> Rogue
+     Mage -> Warlock
+Gladiator -> Berserker
+    Druid -> Beastmaster 
+  Paladin -> Guardian
+ Assassin -> Shadowalker 
+             Skeleton King
+    Witch -> Dark Witch
+   Priest -> 
+ Summoner -> Necromancer
+             Dragon King
+             Elementalist
