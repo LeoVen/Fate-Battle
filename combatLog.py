@@ -92,7 +92,12 @@ def printPossibleAttacks(sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, sk10):
 
 
 
-
+def yon(n):
+    #yes or no
+    if n > 0:
+        return 'N'
+    else:
+        return 'Y'
 
 
 
@@ -105,12 +110,16 @@ def smallMenu(ally, enemy):
 ║\tHit Points : {} {}\t║\tHit Points : {} {}\t║
 ║\tTotal Mana : {} {}\t║\tTotal Mana : {} {}\t║
 ║\t\t\t\t\t\t\t║\t\t\t\t\t\t\t║
+║\tAtt: {}\t\tDef: {}\t\tSkl: {}\t\t║\tAtt: {}\t\tDef: {}\t\tSkl: {}\t\t║
+║\t\t\t\t\t\t\t║\t\t\t\t\t\t\t║
 ╚═══════════════════════════════════════════════════════╩═══════════════════════════════════════════════════════╝
-		'''.format(	ally.CNAME,	    enemy.CNAME,
-					int(ally.HP),	ally.hpBar(),
-					int(enemy.HP),	enemy.hpBar(),
-					int(ally.MN),	ally.manaBar(),
-					int(enemy.MN),	enemy.manaBar()
+		'''.format(	ally.CNAME,	       enemy.CNAME,
+					int(ally.HP),	   ally.hpBar(),
+					int(enemy.HP),     enemy.hpBar(),
+					int(ally.MN),	   ally.manaBar(),
+					int(enemy.MN),	   enemy.manaBar(),
+                    yon(ally.ATTACK),  yon(ally.DEFENSE),  yon(ally.SKILL),
+                    yon(enemy.ATTACK), yon(enemy.DEFENSE), yon(enemy.SKILL)
 					))
 
 
@@ -129,10 +138,11 @@ def commandMenu():
 ║   k (K) - Battle Summary                ? - Shows this help menu      a (A) - Attack Mode                     ║
 ║   m (M) - Shows Comparison Menu                                          ├─ l (L) - Lists possible attacks    ║
 ║   l (L) - List your hero's skills                                        ├─ s (S) - Uses a Character's Skill  ║
-║   c (C) - Show Character's Details                                       ├─ r (R) - Return                    ║
-║   e (E) - Show Enemy's Details                                           ├─ p (P) - Physical Attack           ║
-║   b (B) - Show your hero's buffs                                         └─ m (M) - Magical Attack            ║
-║   d (D) - Show your hero's debuffs                                                                            ║
+║   c (C) - Show Character's Details                                       │     └─ 0 - 9 Choose Skill          ║
+║   e (E) - Show Enemy's Details                                           ├─ r (R) - Return                    ║
+║   b (B) - Show your hero's buffs                                         ├─ p (P) - Physical Attack           ║
+║   d (D) - Show your hero's debuffs                                       └─ m (M) - Magical Attack            ║
+║                                                                       p (P) - Pass Turn                       ║
 ║                                                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
         ''')
@@ -236,12 +246,17 @@ def listSkill(sk):
 ║\t║\t  {}\t  {}\t  {}\t  {}\t  {}\t  {}\t  {}\t  {}\t  {}\t  {}\t\t║\t║
 ║\t╚═══════════════════════════════════════════════════════════════════════════════════════════════╝\t║
 ║\t\t\t\t\t\t\t\t\t\t\t\t\t\t║
-║\t< Extra Attacks               : {}\t\t\t\t\t\t\t\t║
-║\t< Disables Attack After Use   : {}\t\t\t\t\t\t\t\t║
-║\t< Disables Defense After Use  : {}\t\t\t\t\t\t\t\t║
-║\t< Disables Skills After Use   : {}\t\t\t\t\t\t\t\t║
-║\t< Turns of Effect             : {}\t\t\t\t\t\t\t\t║
-║\t< Ignores Enemy's Speed       : {}\t\t\t\t\t\t\t\t║
+║\t< Extra Attacks             : {}\t\t\t\t\t\t\t\t║
+║\t< Ignores Enemy's Speed     : {}\t\t\t\t\t\t\t\t║
+║\t\t\t\t\t\t\t\t\t\t\t\t\t\t║
+║\t  Disables\t\t\t\t\t\t\t\t\t\t\t\t║
+║\t╔═══════════════════════════════════════════════╦═══════════════════════════════════════════════╗\t║
+║\t║\tUser's ...\t\t\t\t║\tTarget's ...\t\t\t\t║\t║
+║\t╠═══════════════════════════════════════════════╬═══════════════════════════════════════════════╣\t║
+║\t║    Attack\t Defense\tSkills\t\t║    Attack\t Defense\tSkills\t\t║\t║
+║\t║    {}\t {}\t\t{}\t\t║    {}\t {}\t\t{}\t\t║\t║
+║\t╚═══════════════════════════════════════════════╩═══════════════════════════════════════════════╝\t║
+║\t< Turns of Effect           : {}\t\t\t\t\t\t\t\t║
 ║\t\t\t\t\t\t\t\t\t\t\t\t\t\t║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
         '''.format( strP(sk.NAME, 20),  sk.ID,              strP(sk.DESC, 90),  strP(sk.COST, 10),
@@ -250,8 +265,10 @@ def listSkill(sk):
                     sk.B_MD,            sk.B_SP,            sk.B_CR,            sk.D_HP,            sk.D_MN,
                     sk.D_HR,            sk.D_MR,            sk.D_PA,            sk.D_MA,            sk.D_PD,
                     sk.D_MD,            sk.D_SP,            sk.D_CR,            strP(sk.EXTRA, 10),
-                    strP(sk.DA, 10),    strP(sk.DD, 10),    strP(sk.DS, 10),    strP(sk.TURNS, 10),
-                    strP(sk.IGSP, 10)))
+                    strP(sk.IGSP, 10),
+                    strP(sk.DuA, 6),    strP(sk.DuD, 6),    strP(sk.DuS, 6),    strP(sk.DeA, 6),
+                    strP(sk.DeD, 6),    strP(sk.DeS, 6),    strP(sk.TOEFF, 10)
+                    ))
 
 
 def battleInfo(ally, enemy):

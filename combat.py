@@ -45,6 +45,8 @@ def combatMode():
 				showDebuffs(ally)
 			elif c == 'k' or c == 'K':
 				battleInfo(ally, enemy)
+			elif c == 'p' or c == 'P':
+				break
 			elif c == 'a' or c == 'A':
 				clear()
 				while True:
@@ -64,30 +66,37 @@ def combatMode():
 												ally.SK[6], ally.SK[7], ally.SK[8],
 												ally.SK[9])
 					elif att == 's' or att == 'S':
-						#Uses Skill
-						while True:
-							skll = chooseSkill(	ally.SK[0], ally.SK[1], ally.SK[2], ally.SK[3],
-												ally.SK[4], ally.SK[5], ally.SK[6], ally.SK[7],
-												ally.SK[8], ally.SK[9])
-							if (skll == '0' or skll == '1' or skll == '2' or skll == '3' or skll == '4' or
-								skll == '5' or skll == '6' or skll == '7' or skll == '8' or skll == '9'):
-								#Attack 	#Attack 	#Attack 	#Attack 	#Attack 	#Attack 	#Attack
-								skll = int(skll)
-								if ally.MN >= ally.SK[skll].COST:
-									#Skill attack
-									array = [ally, enemy]
-									array = skillAttack(ally, enemy, ally.SK[skll])
-									ally = array[0]
-									enemy = array[1]
-									break #-------------------------Successful Attack
-								elif ally.MN < ally.SK[skll].COST:
-									noMana()
+						if ally.SKILL == 0:
+							#Skills are available
+							while True:
+								skll = chooseSkill(	ally.SK[0], ally.SK[1], ally.SK[2], ally.SK[3],
+													ally.SK[4], ally.SK[5], ally.SK[6], ally.SK[7],
+													ally.SK[8], ally.SK[9])
+								if (skll == '0' or skll == '1' or skll == '2' or skll == '3' or skll == '4' or
+									skll == '5' or skll == '6' or skll == '7' or skll == '8' or skll == '9'):
+									#Attack 	#Attack 	#Attack 	#Attack 	#Attack 	#Attack 	#Attack
+									skll = int(skll)
+									if ally.MN >= ally.SK[skll].COST:
+										#Skill attack
+										array = [ally, enemy]
+										array = skillAttack(ally, enemy, ally.SK[skll])
+										ally = array[0]
+										enemy = array[1]
+										break #-------------------------Successful Attack
+									elif ally.MN < ally.SK[skll].COST:
+										noMana()
+									else:
+										error()
+								elif skll == 'r' or skll == 'R':
+									break
 								else:
-									error()
-							elif skll == 'r' or skll == 'R':
-								break
-							else:
-								invalidOption()
+									invalidOption()
+						elif ally.SKILL > 0:
+							skillsDisabled(ally.SKILL)
+						else:
+							error()
+							print("Skill error. Skill Variable < 0")
+							enterToContinue()
 					elif att == 'p' or att == 'P':
 						#Physical Attack
 						array = [ally, enemy]
@@ -165,9 +174,9 @@ def skillAttack(ally, enemy, sk):
 				mod = 1 #Modifier stays the same
 			#If armor is higher than 100% then no damage is taken so that the enemy hp doesn't get increased
 			if enemy.PD <= 100:
-				enemy.DAMAGE += sk.DMG * (1 - enemy.PD / 100)
+				enemy.DAMAGE += ( sk.DMG * (1 - enemy.PD / 100) ) * mod
 			if enemy.MD <= 100:
-				enemy.DAMAGE += sk.MAG * (1 - enemy.MD / 100)
+				enemy.DAMAGE += ( sk.MAG * (1 - enemy.MD / 100) ) * mod
 			ally.MANA += sk.COST
 			ally.TURN -= 1
 			ally.TURN += sk.EXTRA
@@ -184,8 +193,42 @@ def skillAttack(ally, enemy, sk):
 
 
 
-def normalAttack(ally, enemy, type):
-	print('')
+def normalAttack(ally, enemy, types):
+	#Checking speed is mandatory
+	pas = checkSpeed(ally.SP, enemy.SP)
+	if pas:
+		#HIT
+		#Check if critical hit
+		crit = checkCrit(ally.CR)
+		if crit:
+			mod = 2 #Modifier goes up to 2
+		else:
+			mod = 1 #Modifier stays the same
+	else:
+		ally.TURN -= 1
+		skillMissed()
+		return [ally, enemy]
+	if types == 'p':
+		#Physical attack
+		#If armor is higher than 100% then no damage is taken so that the enemy hp doesn't get increased
+		if enemy.PD <= 100:
+			enemy.DAMAGE += ( ally.PA * (1 - enemy.PD / 100) ) * mod
 
+	elif types == 'm':
+		#Magical attack
+		#If armor is higher than 100% then no damage is taken so that the enemy hp doesn't get increased
+		if enemy.MD <= 100:
+			enemy.DAMAGE += ( ally.MA * (1 - enemy.MD / 100) ) * mod
+
+	else:
+		error()
+		print("Attack Type error")
+		enterToContinue()
+
+	ally.TURN -= 1
+
+	#Updating
+	ally.updateStats()
+	enemy.updateStats()
 
 	return [ally, enemy]

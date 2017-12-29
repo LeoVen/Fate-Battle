@@ -2,6 +2,7 @@ from random import randint
 from skills import *
 from stats import classNameArr, charNameArr
 from support import *
+from fightLog import *
 
 class Hero:
 	
@@ -78,15 +79,20 @@ class Hero:
 								skills[j][16], skills[j][17], skills[j][18], skills[j][19],
 								skills[j][20], skills[j][21], skills[j][22], skills[j][23],
 								skills[j][24], skills[j][25], skills[j][26], skills[j][27],
-								skills[j][28], skills[j][29], skills[j][30], skills[j][31])
+								skills[j][28], skills[j][29], skills[j][30], skills[j][31],
+								skills[j][32], skills[j][33], skills[j][34])
 			i += 1
 
 
 	def refresh(self):
 		self.TURN = 1
 		self.DAMAGE -= int(self.pHP * self.HR / 100)
+		if self.DAMAGE < 0:
+			self.DAMAGE = 0
 		self.MANA -= int(self.pMN * self.MR / 100)
-		self.reajustLimits()
+		if self.MANA < 0:
+			self.MANA = 0
+		#self.reajustLimits()
 
 		if self.ATTACK > 0:
 			self.ATTACK -= 1
@@ -94,6 +100,10 @@ class Hero:
 			self.DEFENSE -= 1
 		if self.SKILL > 0:
 			self.DEFENSE -= 1
+		if self.ATTACK < 0 or self.DEFENSE < 0 or self.SKILL < 0:
+			error()
+			print("Variable Error. Attack, Defense or Skill < 0")
+			enterToContinue()
 
 
 	def hpBar(self):
@@ -159,10 +169,29 @@ class Hero:
 		self.MD = self.pMD * (self.bMD - self.dMD)  / 100
 		self.SP = self.pSP * (self.bSP - self.dSP)  / 100
 		self.CR = self.pCR * (self.bCR - self.dCR)  / 100
-		self.reajustLimits()
+		#self.reajustLimits()
 
 
-	def reajustLimits(self):
+	def updateSelfDisables(self, skill, w):
+		if w == 'u' or w == 'W':
+			#User
+			if skill.DuA:
+				self.ATTACK += skill.TOEFF
+			if skill.DuD:
+				self.DEFENSE += skill.TOEFF
+			if skill.DuS:
+				self.SKILL += skill.TOEFF
+		elif w == 'e' or w == 'E':
+			#Enemy
+			if skill.DeA:
+				self.ATTACK += skill.TOEFF
+			if skill.DeD:
+				self.DEFENSE += skill.TOEFF
+			if skill.DeS:
+				self.SKILL += skill.TOEFF
+
+
+	'''def reajustLimits(self):
 		if self.HP > self.pHP:
 			self.HP = self.pHP
 		if self.MN > self.pMN:
@@ -182,7 +211,7 @@ class Hero:
 		if self.SP > self.pSP:
 			self.SP = self.pSP
 		if self.CR > self.pCR:
-			self.CR = self.pCR
+			self.CR = self.pCR'''
 
 
 
@@ -192,7 +221,7 @@ class Skill:
 
 	def __init__(	self, i_d, name, desc, cost, hp, mn, hr, mr, pa, ma, pd, 
 					md, sp, cr, dhp, dmn, dhr, dmr, dpa, dma, dpd, dmd, dsp,
-					dcr, phydmg, magdmg, exatt, dd, da, ds, eff, ig):
+					dcr, phydmg, magdmg, exatt, dd, da, ds, dd_e, da_e, ds_e, eff, ig):
 		self.ID = i_d
 		self.NAME = name
 		self.DESC = desc
@@ -220,8 +249,11 @@ class Skill:
 		self.DMG = phydmg
 		self.MAG = magdmg
 		self.EXTRA = exatt
-		self.DD = dd
-		self.DA = da
-		self.DS = ds
-		self.TURNS = eff
+		self.DuD = dd 		#Disables User
+		self.DuA = da 		#Disables User
+		self.DuS = ds 		#Disables User
+		self.DeD = dd_e 	#Disables enemy
+		self.DeA = da_e 	#Disables enemy
+		self.DeS = ds_e 	#Disables enemy
+		self.TOEFF = eff
 		self.IGSP = ig

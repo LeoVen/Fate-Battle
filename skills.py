@@ -13,29 +13,35 @@ skills = [
 		2000,				#Physical Damage
 		1000,				#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		True,				#Disables Attack
-		True,				#Disables Skills
+		False,				#Disables User's Defense
+		True,				#Disables User's Attack
+		True,				#Disables User's Skills
+		True,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		2,					#Turns of Effect
 		True				#Ignores Speed
 	],
 	[
 		1,					#ID
 		"Armor Upgrade",	#Skill Name
-		"Boosts Physical Defense",		#Description
+		"Boosts Physical Defense and Hit Points",		#Description
 		1000,				#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	10,	0,	0,	0,
+		4,	0,	0,	0,	0,	0,	15,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		0,				#Physical Damage
 		0,				#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -46,36 +52,42 @@ skills = [
 		500,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	3,	0,	3,	0,	0,
+		0,	0,	0,	0,	0,	30,	0,	3,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		3,					#ID
 		"Rally",					#Skill Name
-		"Increases Speed and Physical Attack but decreases Health Regen",	#Description
-		400,					#Cost
+		"Boost your heart and soul! Increases stats but decreases health regen",	#Description
+		800,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	-5,	0,	5,	0,	0,	0,	3,	0,
+		2,	0, -10,	0,	5,	0,	0,	0,	3,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,  -3,	0,	0,	0,	0,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -86,16 +98,19 @@ skills = [
 		500,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	1,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		400,					#Physical Damage
 		300,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -113,9 +128,12 @@ skills = [
 		100,					#Physical Damage
 		200,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -133,9 +151,12 @@ skills = [
 		600,				#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -153,29 +174,35 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		8,					#ID
 		"Crushing Strike",					#Skill Name
-		"An all-in strike! Deals a lot of damage but decreases speed",					#Description
+		"An all-in strike! Deals a lot of damage but decreases speed and lowers enemy's armor",	#Description
 		600,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	-10,	0,
+		0,	0,	0,	0,	1,	0,	1,	0,	-10,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	2,	0,	0,	0,
 		800,					#Physical Damage
 		100,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -193,29 +220,35 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		1,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		10,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Noble Phantasm",					#Skill Name
+		"A shot of incredibly high energy. Deals a lot of damage but has many side-effects",	#Description
+		1000,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,	-1,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-		0,					#Physical Damage
+		2,	0,	2,	0,	0,	0,	1,	0,	1,	0,
+		3000,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -233,9 +266,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -253,9 +289,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -273,9 +312,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -293,9 +335,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -313,9 +358,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -333,9 +381,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -353,9 +404,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -373,9 +427,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -393,9 +450,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -413,9 +473,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -433,9 +496,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -453,9 +519,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -473,9 +542,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -493,9 +565,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -513,9 +588,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -533,9 +611,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -553,9 +634,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -573,9 +657,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -593,9 +680,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -613,9 +703,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -633,9 +726,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -653,9 +749,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -673,9 +772,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -693,9 +795,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -713,9 +818,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -733,9 +841,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -753,9 +864,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -773,9 +887,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -793,9 +910,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -813,9 +933,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -833,9 +956,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -853,9 +979,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -873,9 +1002,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -893,9 +1025,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -913,9 +1048,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -933,9 +1071,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -953,9 +1094,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -973,9 +1117,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -993,9 +1140,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1013,9 +1163,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1033,9 +1186,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1053,9 +1209,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1073,9 +1232,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1093,9 +1255,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1113,9 +1278,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1133,9 +1301,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1153,9 +1324,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1173,9 +1347,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1193,9 +1370,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1213,9 +1393,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1233,9 +1416,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1253,9 +1439,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1273,9 +1462,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1293,9 +1485,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1313,9 +1508,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1333,9 +1531,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1353,9 +1554,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1373,9 +1577,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1393,9 +1600,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
@@ -1413,9 +1623,12 @@ skills = [
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
-		False,				#Disables Defense
-		False,				#Disables Attack
-		False,				#Disables Skills
+		False,				#Disables User's Defense
+		False,				#Disables User's Attack
+		False,				#Disables User's Skills
+		False,				#Disables Enemy's Defense
+		False,				#Disables Enemy's Attack
+		False,				#Disables Enemy's Skills
 		0					#Turns of Effect
 	]
 ]
