@@ -189,6 +189,8 @@ def skillAttack(ally, enemy, sk):
 	enemy.addDebuffs(sk)
 	ally.updateStats()
 	enemy.updateStats()
+	ally.updateDisables(sk, 'u')
+	enemy.updateDisables(sk, 'e')
 	return [ally, enemy]
 
 
