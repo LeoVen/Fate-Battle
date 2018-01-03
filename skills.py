@@ -6,12 +6,12 @@ skills = [
 		1000,				#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		2,	2,	2,	2,	2,	2,	2,	2,	2,	2,
+		5,	5,	5,	5,	5,	5,	5,	5,	5,	5,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		2,	2,	2,	2,	2,	2,	2,	2,	2,	2,
-		2000,				#Physical Damage
-		1000,				#Magic Damage
+		5,	5,	5,	5,	5,	5,	5,	5,	5,	5,
+		500,				#Physical Damage
+		1500,				#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
 		True,				#Disables User's Attack
@@ -25,11 +25,11 @@ skills = [
 	[
 		1,					#ID
 		"Armor Upgrade",	#Skill Name
-		"Boosts Physical Defense and Hit Points",		#Description
+		"Boosts Physical Defense and Hit Points but decreases speed",		#Description
 		1000,				#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		4,	0,	0,	0,	0,	0,	15,	0,	0,	0,
+		10,	0,	0,	0,	0,	0,	55,	0,	15,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -48,11 +48,11 @@ skills = [
 	[
 		2,					#ID
 		"Blessings",					#Skill Name
-		"A blessing that increases magic attack and magic defense",	#Description
+		"A blessing that increases mana regen, magic attack and magic defense",	#Description
 		500,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	30,	0,	3,	0,	0,
+		0,	0,	0,	20,	0,	30,	0,	30,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -75,10 +75,10 @@ skills = [
 		800,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		2,	0, -10,	0,	5,	0,	0,	0,	3,	0,
+		20,	0, -10,	0,	20,	0,	0,	0,	5,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,  -3,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,  -5,	0,	0,	0,	0,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
@@ -93,25 +93,25 @@ skills = [
 	],
 	[
 		4,					#ID
-		"Sword Slash",		#Skill Name
-		"A heavy sword slash that deals both physical and magical damage",	#Description
+		"Hack & Slash",		#Skill Name
+		"A double strike with increased damage",	#Description
 		500,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	1,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	20,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-		400,					#Physical Damage
-		300,					#Magic Damage
-		0,					#Extra Attacks
+		0,					#Physical Damage
+		0,					#Magic Damage
+		2,					#Extra Attacks
 		False,				#Disables User's Defense
 		False,				#Disables User's Attack
-		False,				#Disables User's Skills
+		True,				#Disables User's Skills
 		False,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
 		False,				#Disables Enemy's Skills
-		0,					#Turns of Effect
+		1,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
@@ -124,8 +124,8 @@ skills = [
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		1,	1,	1,	1,	1,	1,	1,	1,	1,	1,
-		100,					#Physical Damage
+		2,	2,	2,	2,	2,	2,	2,	2,	2,	2,
+		200,					#Physical Damage
 		200,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
@@ -141,10 +141,10 @@ skills = [
 		6,					#ID
 		"Piercing Strike",					#Skill Name
 		"Attacks with the point of the sword are deadly! Increases critical chance and deals damage", #Description
-		800,				#Cost
+		500,				#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	4,
+		0,	0,	0,	0,	0,	0,	0,	0,	0,	10,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -167,7 +167,7 @@ skills = [
 		600,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	4,	4,	0,	0,	0,	0,	0,	0,
+		0,	0,	20,	20,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -209,11 +209,11 @@ skills = [
 	[
 		9,					#ID
 		"Rush",					#Skill Name
-		"Drops of parts of the armor to become faster!",					#Description
-		0,					#Cost
+		"Drops of parts of the armor to become faster!",			#Description
+		300,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0, -10,	0,	6,	0,
+		0,	0,	0,	0,	0,	0, -20,	0,	20,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -240,13 +240,13 @@ skills = [
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		2,	0,	2,	0,	0,	0,	1,	0,	1,	0,
-		3000,					#Physical Damage
+		2000,				#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
 		False,				#Disables User's Attack
 		False,				#Disables User's Skills
-		False,				#Disables Enemy's Defense
+		True,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
 		False,				#Disables Enemy's Skills
 		0,					#Turns of Effect
@@ -254,15 +254,15 @@ skills = [
 	],
 	[
 		11,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Concentration",					#Skill Name
+		"Regains Concentration increasing Critical Chance and Speed",					#Description
+		400,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	0,	0,	20,	20,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	0,	0,	2,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
@@ -277,35 +277,35 @@ skills = [
 	],
 	[
 		12,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Triple Shot",					#Skill Name
+		"Three successive Physical Attacks! Skills Disabled. Increases physical attack!",	#Description
+		800,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	10,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
-		0,					#Extra Attacks
+		3,					#Extra Attacks
 		False,				#Disables User's Defense
 		False,				#Disables User's Attack
-		False,				#Disables User's Skills
+		True,				#Disables User's Skills
 		False,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
 		False,				#Disables Enemy's Skills
-		0,					#Turns of Effect
+		1,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		13,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Dead Eye",					#Skill Name
+		"One Shot, One Kill. Increases Physical Attack but attacks are disabled for some time",	#Description
+		800,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	80,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -313,25 +313,25 @@ skills = [
 		0,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
-		False,				#Disables User's Attack
-		False,				#Disables User's Skills
+		True,				#Disables User's Attack
+		True,				#Disables User's Skills
 		False,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
 		False,				#Disables Enemy's Skills
-		0,					#Turns of Effect
+		3,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		14,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Deft Legs",					#Skill Name
+		"Increases speed",					#Description
+		500,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	0,	0,	20,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	0,	0,	5,	0,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
@@ -346,16 +346,16 @@ skills = [
 	],
 	[
 		15,					#ID
-		"",					#Skill Name
-		"",					#Description
+		"Poisonous Shot",					#Skill Name
+		"Inflicts some damage but enemy gets poisoned decreasing its health regen and mana regen",					#Description
 		0,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-		0,					#Physical Damage
+		0,	0,	20,	20,	0,	0,	0,	0,	0,	0,
+		400,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
@@ -369,39 +369,39 @@ skills = [
 	],
 	[
 		16,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Armor Breaker",					#Skill Name
+		"Disables enemy's armor",					#Description
+		400,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-		0,					#Physical Damage
+		0,	0,	0,	0,	0,	0,	20,	0,	0,	0,
+		600,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
 		False,				#Disables User's Attack
 		False,				#Disables User's Skills
-		False,				#Disables Enemy's Defense
+		True,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
 		False,				#Disables Enemy's Skills
-		0,					#Turns of Effect
+		2,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		17,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"String Shot",					#Skill Name
+		"Ties up the enemy loosing efficiency in its attacks",					#Description
+		400,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
-		0,					#Physical Damage
+		0,	0,	0,	0,	20,	0,	0,	0,	0,	0,
+		400,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
 		False,				#Disables User's Defense
@@ -1609,6 +1609,9 @@ skills = [
 		0,					#Turns of Effect
 		False				#Ignores Speed
 	],
+]
+
+'''
 	[
 		0,					#ID
 		"",					#Skill Name
@@ -1631,4 +1634,4 @@ skills = [
 		False,				#Disables Enemy's Skills
 		0					#Turns of Effect
 	]
-]
+'''

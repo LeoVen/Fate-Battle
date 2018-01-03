@@ -358,26 +358,18 @@ def help():
 ║              ║              ║                                                    ║              ║             ║
 ║              ║              ║                  lvenk26@gmail.com                 ║              ║             ║
 ║                             ╠════════════════════════════════════════════════════╣                            ║
-║                             ║           Enter ? for help or 0 to quit            ║                            ║
+║                             ║                 Enter 0 to quit ...                ║                            ║
 ╚═════════════════════════════╩════════════════════════════════════════════════════╩════════════════════════════╝
-[Help Menu] :
-Hello and welcome to my very first game I've ever made.
-This game tries to simulate the Battle for the Graal.
-This battle shows up in the Fate Series.
-If you haven't watched it then now is your chance!
-
-Press enter to continue...
     ''')
-    input()
 
 def menu():
     print('''
 ╔═════════════════════════════╦════════════════════════════════════════════════════╦════════════════════════════╗
 ║                             ║ Main Menu                                          ║                            ║
 ║                             ║                                                    ║                            ║
-║              ║              ║ a (A) About this game                              ║              ║             ║
-║              ║              ║ c (C) Credits                                      ║              ║             ║
-║              ║              ║ r (R) Release Notes                                ║              ║             ║
+║              ║              ║ a (A) About this game  │  g (G) Game instructions  ║              ║             ║
+║              ║              ║ c (C) Credits          │  t (T) To-Do list         ║              ║             ║
+║              ║              ║ r (R) Release Notes    │                           ║              ║             ║
 ║              ║              ║                                                    ║              ║             ║
 ║              ║              ║ [Game Modes]                                       ║              ║             ║
 ║              ║              ║ 1 - Single Combat                                  ║              ║             ║
@@ -436,11 +428,18 @@ def releaseNotes():
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║ Release Notes                                                                                                 ║
 ║                                                                                                               ║
-║  29/12/2017                                                                                                   ║
-║  < Skill Attack functions polished                                                                            ║
-║  < Added Physical and Magical attack                                                                          ║
-║  < Enemy Disabling Added to Skills                                                                            ║
+║ 03/01/2018                                                                                                    ║
+║ < Changed battle function to support enemy attacks                                                            ║
+║ < Now there is "player1" and "player2". Former "ally" and "enemy"                                             ║
+║ < Disables features are now complete                                                                          ║
+║ < Making of Skills and balancing started                                                                      ║
+║ < Regeneration is now a fixed number. No longer based on total health or mana                                 ║
+║ < Added Game Instructions                                                                                     ║
 ║                                                                                                               ║
+║ 29/12/2017                                                                                                    ║
+║ < Skill Attack functions polished                                                                             ║
+║ < Added Physical and Magical attack                                                                           ║
+║ < Enemy Disabling Added to Skills                                                                             ║
 ║                                                                                                               ║
 ║ 28/12/2017                                                                                                    ║
 ║ < Skill Attack functions added                                                                                ║
@@ -461,12 +460,85 @@ def releaseNotes():
         ''')
 
 
+def gameInstructions():
+    print('''
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Game Instructions                                                                                             ║
+║                                                                                                               ║
+║ In this game you have 10 status that define your hero:                                                        ║
+║                                                                                                               ║
+║ ♥ HP: "Hit Points"       - This is your character's vitality. If this gets to 0 your hero is dead and its     ║
+║                            game over. Always keep an eye on it!                                               ║
+║                                                                                                               ║
+║ ♣ MN: "Mana"             - This is your hero's mana pool. Skills uses mana. It defines how often you can      ║
+║                            use skills before you run out of mana.                                             ║
+║                                                                                                               ║
+║ @ HR: "Health Regen"     - Health regen is how many hit points your hero recovers at the end of every turn.   ║
+║                            A high HR is important for heroes with low armor.                                  ║
+║                                                                                                               ║
+║ § MR: "Mana Regen"       - Mana regen is how many mana points recovers at the end of every turn. It is very   ║
+║                            important for spellcasters that don't have much damage on their normal attacks.    ║
+║                                                                                                               ║
+║ ♠ PA: "Physical Attack"  - A physical attack causes physical damage. Part of its damage is blocked by armor   ║
+║                            (Physical Defense) and as it is said: your best defense is your best attack.       ║
+║                                                                                                               ║
+║ ╬ MA: "Magical Attack"   - Magical attacks causes magical damage. Part of its damage is blocked by a Magical  ║
+║                            Defense. It is useful against heroes with low magic defenses.                      ║
+║                                                                                                               ║
+║ ♦ PD: "Physical Defense" - Physical defense blocks the enemy's physical attacks. This stat is important so    ║
+║                            that your hero is able to take more damage without dying.                          ║
+║                                                                                                               ║
+║ ▒ MD: "Magical Defense"  - Physical defense blocks the enemy's magical attacks. This stat is important        ║
+║                            because your hero also gains advantages against skills that cause magic damage     ║
+║                                                                                                               ║
+║ » SP: "Speed"            - The faster your hero is, the harder it is to hit him. If your hero's speed is      ║
+║                            greater than your enemy's it is a garanteed hit. Some skills can ignore speed.     ║
+║                                                                                                               ║
+║ © CR: "Critical Chance"  - Critical hits deal twice as much damage. It can be devastating in combos and if    ║
+║                            the chances are high, your enemy better have a good armor or he will die!          ║
+║                                                                                                               ║
+║                                                                                                               ║
+║ There are three types of attacks                                                                              ║
+║                                                                                                               ║
+║ < Skill Attacks    - A skill attack uses mana regardless of hitting or not. Some skill attacks are just       ║
+║                      buffs to your hero or debuffs to your enemy. It can cause both Physical or Magical       ║
+║                      damage at the same time. If a critical is achieved, both damages will double.            ║
+║                                                                                                               ║
+║ < Physical Attacks - A physical attack causes physical damage only. It has no cost and is a default attack.   ║
+║                                                                                                               ║
+║ < Magical Attacks  - A magical attack causes magical damage only. It has no cost and is a default attack.     ║
+║                                                                                                               ║
+║                                                                                                               ║
+║ There are (currently) 7 classes:                                                                              ║
+║                                                                                                               ║
+║ < Saber                                                                                                       ║
+║ < Archer                                                                                                      ║
+║ < Rider                                                                                                       ║
+║ < Lancer                                                                                                      ║
+║ < Caster                                                                                                      ║
+║ < Berserker                                                                                                   ║
+║ < Assassin                                                                                                    ║
+║                                                                                                               ║
+║                                                                                                               ║
+║                                                                                                               ║
+╠═════════════════════════════╦════════════════════════════════════════════════════╦════════════════════════════╣
+║ /\/\/\/\/\/\/\/\/\/\/\/\/\/ ║               Enter to continue ...                ║ \/\/\/\/\/\/\/\/\/\/\/\/\/ ║
+╚═════════════════════════════╩════════════════════════════════════════════════════╩════════════════════════════╝
+        ''')
 
 
-
-
-
-
-
-
-            
+def toDo():
+    print('''
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ To-Do List                                                                                                    ║
+║                                                                                                               ║
+║ - Battle logs and messages (in current state the player doesn't know what is going on with the numbers)       ║
+║ - Skills [18/70]                                                                                              ║
+║ - More classes (beyond those in Fate)                                                                         ║
+║ - Improve menu hierarchy                                                                                      ║
+║ - Improve keyboard navigation                                                                                 ║
+║                                                                                                               ║
+╠═════════════════════════════╦════════════════════════════════════════════════════╦════════════════════════════╣
+║ /\/\/\/\/\/\/\/\/\/\/\/\/\/ ║               Enter to continue ...                ║ \/\/\/\/\/\/\/\/\/\/\/\/\/ ║
+╚═════════════════════════════╩════════════════════════════════════════════════════╩════════════════════════════╝
+        ''')

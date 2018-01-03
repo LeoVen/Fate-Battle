@@ -1,13 +1,34 @@
 import combat
 import logs
 from support import *
+import heroSelection
+from animation import *
 
 def choice(c):
     if c == '0':
         return False
     elif c == '1':
         clear()
-        combat.combatMode()
+        player1 = heroSelection.select()
+        player2 = heroSelection.select()
+        pArr = [player1, player2]
+        #Animating Creation...
+        #swordAnimation(1)
+        #swordAnimation(2)
+        while player1.HP > 0 and player2.HP > 0:
+            #player1 turn
+            pArr = combat.combatMode(player1, player2, 1)
+            player1 = pArr[0]
+            player2 = pArr[1]
+
+            #player2 turn
+            pArr = combat.combatMode(player2, player1, 2)
+            player2 = pArr[0]
+            player1 = pArr[1]
+
+            player1.refresh()
+            player2.refresh()
+
         return True
     elif c == '2':
         clear()
@@ -45,6 +66,11 @@ def choice(c):
     elif c == 'a' or c == 'A':
         clear()
         logs.about()
+        input("<<")
+        return True
+    elif c == 'g' or c == 'G':
+        clear()
+        logs.gameInstructions()
         input("<<")
         return True
     else:

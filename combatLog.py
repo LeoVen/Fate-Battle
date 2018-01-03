@@ -13,19 +13,12 @@ def attackMode():
                     ''')
 
 
-def playersTurn():
+def playersTurn(p):
     print('''
 \t╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
-\t║\t\t\t\t\tPlayer's Turn\t\t\t\t\t\t║
+\t║\t\t\t\t\tPlayer {} Turn\t\t\t\t\t\t║
 \t╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-        ''')
-
-def enemysTurn():
-    print('''
-\t╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
-\t║\t\t\t\t\tEnemy's Turn\t\t\t\t\t\t║
-\t╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-        ''')
+        '''.format(p))
 
 
 def printPossibleAttacks(sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, sk10):
@@ -283,8 +276,8 @@ def battleInfo(ally, enemy):
 ║ \tName\t\t\t: {}\t║\tName\t\t\t: {}\t║
 ║ \tHit Points\t\t: {}\t\t{}%\t║\tHit Points\t\t: {}\t\t{}%\t║
 ║ \tMana\t\t\t: {}\t\t{}%\t║\tMana\t\t\t: {}\t\t{}%\t║
-║ \tHealth Regen\t\t: {}%\t\t{}%\t║\tHealth Regen\t\t: {}%\t\t{}%\t║
-║ \tMana Regen\t\t: {}%\t\t{}%\t║\tMana Regen\t\t: {}%\t\t{}%\t║
+║ \tHealth Regen\t\t: {}\t\t{}%\t║\tHealth Regen\t\t: {}%\t\t{}%\t║
+║ \tMana Regen\t\t: {}\t\t{}%\t║\tMana Regen\t\t: {}%\t\t{}%\t║
 ║ \tPhysical Attack\t\t: {}\t\t{}%\t║\tPhysical Attack\t\t: {}\t\t{}%\t║
 ║ \tMagical Attack\t\t: {}\t\t{}%\t║\tMagical Attack\t\t: {}\t\t{}%\t║
 ║ \tPhysical Defense\t: {}%\t\t{}%\t║\tPhysical Defense\t: {}%\t\t{}%\t║

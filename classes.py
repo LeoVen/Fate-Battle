@@ -86,10 +86,12 @@ class Hero:
 
 	def refresh(self):
 		self.TURN = 1
-		self.DAMAGE -= int(self.pHP * self.HR / 100)
+		#self.DAMAGE -= int(self.pHP * self.HR / 100)
+		self.DAMAGE -= self.HR
 		if self.DAMAGE < 0:
 			self.DAMAGE = 0
-		self.MANA -= int(self.pMN * self.MR / 100)
+		#self.MANA -= int(self.pMN * self.MR / 100)
+		self.MANA -= self.MR
 		if self.MANA < 0:
 			self.MANA = 0
 		#self.reajustLimits()
@@ -99,7 +101,7 @@ class Hero:
 		if self.DEFENSE > 0:
 			self.DEFENSE -= 1
 		if self.SKILL > 0:
-			self.DEFENSE -= 1
+			self.SKILL -= 1
 		if self.ATTACK < 0 or self.DEFENSE < 0 or self.SKILL < 0:
 			error()
 			print("Variable Error. Attack, Defense or Skill < 0 A{} D{} S{}".format(
