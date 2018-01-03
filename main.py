@@ -73,6 +73,11 @@ def choice(c):
         logs.gameInstructions()
         input("<<")
         return True
+    elif c == 't' or c == 'T':
+        clear()
+        logs.toDo()
+        input("<<")
+        return True
     else:
         clear()
         logs.error()
