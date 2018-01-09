@@ -107,6 +107,7 @@ class Hero:
 			print("Variable Error. Attack, Defense or Skill < 0 A{} D{} S{}".format(
 					self.ATTACK, self.DEFENSE, self.SKILL))
 			enterToContinue()
+		self.updateStats()
 
 
 	def hpBar(self):
@@ -172,7 +173,6 @@ class Hero:
 		self.MD = self.pMD * (self.bMD - self.dMD)  / 100
 		self.SP = self.pSP * (self.bSP - self.dSP)  / 100
 		self.CR = self.pCR * (self.bCR - self.dCR)  / 100
-		#self.reajustLimits()
 
 
 	def updateDisables(self, skill, w):
@@ -192,29 +192,6 @@ class Hero:
 				self.DEFENSE += skill.TOEFF
 			if skill.DeS:
 				self.SKILL += skill.TOEFF
-
-
-	'''def reajustLimits(self):
-		if self.HP > self.pHP:
-			self.HP = self.pHP
-		if self.MN > self.pMN:
-			self.MN = self.pMN
-		if self.HR > self.pHR:
-			self.HR = self.pHR
-		if self.MR > self.pMR:
-			self.MR = self.pMR
-		if self.PA > self.pPA:
-			self.PA = self.pPA
-		if self.MA > self.pMA:
-			self.MA = self.pMA
-		if self.PD > self.pPD:
-			self.PD = self.pPD
-		if self.MD > self.pMD:
-			self.MD = self.pMD
-		if self.SP > self.pSP:
-			self.SP = self.pSP
-		if self.CR > self.pCR:
-			self.CR = self.pCR'''
 
 
 

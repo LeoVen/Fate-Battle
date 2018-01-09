@@ -276,8 +276,8 @@ def battleInfo(ally, enemy):
 ║ \tName\t\t\t: {}\t║\tName\t\t\t: {}\t║
 ║ \tHit Points\t\t: {}\t\t{}%\t║\tHit Points\t\t: {}\t\t{}%\t║
 ║ \tMana\t\t\t: {}\t\t{}%\t║\tMana\t\t\t: {}\t\t{}%\t║
-║ \tHealth Regen\t\t: {}\t\t{}%\t║\tHealth Regen\t\t: {}%\t\t{}%\t║
-║ \tMana Regen\t\t: {}\t\t{}%\t║\tMana Regen\t\t: {}%\t\t{}%\t║
+║ \tHealth Regen\t\t: {}\t\t{}%\t║\tHealth Regen\t\t: {}\t\t{}%\t║
+║ \tMana Regen\t\t: {}\t\t{}%\t║\tMana Regen\t\t: {}\t\t{}%\t║
 ║ \tPhysical Attack\t\t: {}\t\t{}%\t║\tPhysical Attack\t\t: {}\t\t{}%\t║
 ║ \tMagical Attack\t\t: {}\t\t{}%\t║\tMagical Attack\t\t: {}\t\t{}%\t║
 ║ \tPhysical Defense\t: {}%\t\t{}%\t║\tPhysical Defense\t: {}%\t\t{}%\t║
@@ -320,15 +320,6 @@ def comparisonMenu(ally, enemy):
     enterToContinue()
 
 
-def enterToContinue():
-    print('''
-\t╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
-\t║\t\t\t\tPress Enter to Continue ...\t\t\t\t\t║
-\t╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-        ''')
-    input("<<")
-
-
 def chooseSkill(sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, sk10):
     clear()
     print('''
@@ -358,3 +349,6 @@ def chooseSkill(sk1, sk2, sk3, sk4, sk5, sk6, sk7, sk8, sk9, sk10):
                     strP(sk9.NAME, 20),  strP(sk9.COST, 7),  strP(sk10.NAME, 20), strP(sk10.COST, 7)))
     c = input("<<")
     return c
+
+
+

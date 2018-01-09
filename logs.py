@@ -428,6 +428,11 @@ def releaseNotes():
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║ Release Notes                                                                                                 ║
 ║                                                                                                               ║
+║ 04/01/2018                                                                                                    ║
+║ < Skills were added                                                                                           ║
+║ < Some bugs were fixed                                                                                        ║
+║ < Added Ending Screen                                                                                         ║
+║                                                                                                               ║
 ║ 03/01/2018                                                                                                    ║
 ║ < Changed battle function to support enemy attacks                                                            ║
 ║ < Now there is "player1" and "player2". Former "ally" and "enemy"                                             ║
@@ -533,12 +538,61 @@ def toDo():
 ║ To-Do List                                                                                                    ║
 ║                                                                                                               ║
 ║ - Battle logs and messages (in current state the player doesn't know what is going on with the numbers)       ║
-║ - Skills [18/70]                                                                                              ║
+║ - Skills [22/70]                                                                                              ║
 ║ - More classes (beyond those in Fate)                                                                         ║
 ║ - Improve menu hierarchy                                                                                      ║
 ║ - Improve keyboard navigation                                                                                 ║
+║ - End game messages                                                                                           ║
+║ - Heroes' special abilities (see notes.txt)                                                                   ║
+║                                                                                                               ║
+║ - Story Mode                                                                                                  ║
+║ - Sandbox Mode                                                                                                ║
 ║                                                                                                               ║
 ╠═════════════════════════════╦════════════════════════════════════════════════════╦════════════════════════════╣
 ║ /\/\/\/\/\/\/\/\/\/\/\/\/\/ ║               Enter to continue ...                ║ \/\/\/\/\/\/\/\/\/\/\/\/\/ ║
 ╚═════════════════════════════╩════════════════════════════════════════════════════╩════════════════════════════╝
         ''')
+
+
+
+def endingScreen(ally, enemy):
+    d = 100
+    clear()
+    print('''
+\t╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
+\t║                                                                                               ║
+\t║\t\t\t\t\tCombat Ended\t\t\t\t\t\t║
+\t║                                                                                               ║
+\t╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════╦═══════════════════════════════════════════════════════╗
+║\t\t\t\t\t\t\t║\t\t\t\t\t\t\t║
+║ \t\t<< Player 1 >>\t \t\t\t║\t\t<< Player 2 >>\t \t\t\t║
+║ \tClass\t\t\t: {}\t\t║\tClass\t\t\t: {}\t\t║
+║ \tName\t\t\t: {}\t║\tName\t\t\t: {}\t║
+║ \tHit Points\t\t: {}\t\t{}%\t║\tHit Points\t\t: {}\t\t{}%\t║
+║ \tMana\t\t\t: {}\t\t{}%\t║\tMana\t\t\t: {}\t\t{}%\t║
+║ \tHealth Regen\t\t: {}\t\t{}%\t║\tHealth Regen\t\t: {}\t\t{}%\t║
+║ \tMana Regen\t\t: {}\t\t{}%\t║\tMana Regen\t\t: {}\t\t{}%\t║
+║ \tPhysical Attack\t\t: {}\t\t{}%\t║\tPhysical Attack\t\t: {}\t\t{}%\t║
+║ \tMagical Attack\t\t: {}\t\t{}%\t║\tMagical Attack\t\t: {}\t\t{}%\t║
+║ \tPhysical Defense\t: {}%\t\t{}%\t║\tPhysical Defense\t: {}%\t\t{}%\t║
+║ \tMagical Defense\t\t: {}%\t\t{}%\t║\tMagical Defense\t\t: {}%\t\t{}%\t║
+║ \tSpeed\t\t\t: {}\t\t{}%\t║\tSpeed\t\t\t: {}\t\t{}%\t║
+║ \tCritical Hit\t\t: {}%\t\t{}%\t║\tCritical Hit\t\t: {}%\t\t{}%\t║
+║\t\t\t\t\t\t\t║\t\t\t\t\t\t\t║
+╚═══════════════════════════════════════════════════════╩═══════════════════════════════════════════════════════╝
+    '''.format(ally.CNAME, enemy.CNAME,
+               ally.NAME,  enemy.NAME,
+               int(ally.HP),   int(ally.bHP - ally.dHP - d),    int(enemy.HP),    int(enemy.bHP - enemy.dHP - d),
+               int(ally.MN),   int(ally.bMN - ally.dMN - d),    int(enemy.MN),    int(enemy.bMN - enemy.dMN - d),
+               int(ally.HR),   int(ally.bHR - ally.dHR - d),    int(enemy.HR),    int(enemy.bHR - enemy.dHR - d),
+               int(ally.MR),   int(ally.bMR - ally.dMR - d),    int(enemy.MR),    int(enemy.bMR - enemy.dMR - d),
+               int(ally.PA),   int(ally.bPA - ally.dPA - d),    int(enemy.PA),    int(enemy.bPA - enemy.dPA - d),
+               int(ally.MA),   int(ally.bMA - ally.dMA - d),    int(enemy.MA),    int(enemy.bMA - enemy.dMA - d),
+               int(ally.PD),   int(ally.bPD - ally.dPD - d),    int(enemy.PD),    int(enemy.bPD - enemy.dPD - d),
+               int(ally.MD),   int(ally.bMD - ally.dMD - d),    int(enemy.MD),    int(enemy.bMD - enemy.dMD - d),
+               int(ally.SP),   int(ally.bSP - ally.dSP - d),    int(enemy.SP),    int(enemy.bSP - enemy.dSP - d),
+               int(ally.CR),   int(ally.bCR - ally.dCR - d),    int(enemy.CR),    int(enemy.bCR - enemy.dCR - d)
+               ))
+    enterToContinue()

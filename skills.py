@@ -348,7 +348,7 @@ skills = [
 		15,					#ID
 		"Poisonous Shot",					#Skill Name
 		"Inflicts some damage but enemy gets poisoned decreasing its health regen and mana regen",					#Description
-		0,					#Cost
+		400,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -415,15 +415,15 @@ skills = [
 	],
 	[
 		18,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Diminishing Force",					#Skill Name
+		"A weak force that weakens the enemy",	#Description
+		1000,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		5,	5,	5,	5,	5,	5,	5,	5,	5,	5,
 		0,					#Physical Damage
 		0,					#Magic Damage
 		0,					#Extra Attacks
@@ -432,18 +432,18 @@ skills = [
 		False,				#Disables User's Skills
 		False,				#Disables Enemy's Defense
 		False,				#Disables Enemy's Attack
-		False,				#Disables Enemy's Skills
-		0,					#Turns of Effect
+		True,				#Disables Enemy's Skills
+		2,					#Turns of Effect
 		False				#Ignores Speed
 	],
 	[
 		19,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Gaia",					#Skill Name
+		"An ancient magic that protects the user greatly increasing both defenses",		#Description
+		600,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+		0,	0,	0,	0,	0,	0,	120,120, 0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
@@ -461,7 +461,7 @@ skills = [
 	],
 	[
 		20,					#ID
-		"",					#Skill Name
+		"Noble Phantasm",					#Skill Name
 		"",					#Description
 		0,					#Cost
 		#Buffs
@@ -1151,7 +1151,7 @@ skills = [
 	],
 	[
 		50,					#ID
-		"",					#Skill Name
+		"Noble Phantasm",					#Skill Name
 		"",					#Description
 		0,					#Cost
 		#Buffs
@@ -1174,12 +1174,12 @@ skills = [
 	],
 	[
 		51,					#ID
-		"",					#Skill Name
-		"",					#Description
-		0,					#Cost
+		"Barbarian Rage",					#Skill Name
+		"He won't care about his health. Only about killing his enemies!",					#Description
+		1000,					#Cost
 		#Buffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
-		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,
+	 	-50, 0,	0,	0,	150, 0,	0,	0,	0,	0,
 		#Debuffs
 		#HP	MN	HR	MR	PA	MA	PD	MD	SP	CR
 		0,	0,	0,	0,	0,	0,	0,	0,	0,	0,

@@ -29,6 +29,9 @@ def choice(c):
             player1.refresh()
             player2.refresh()
 
+        #End of combat
+        logs.endingScreen(player1, player2)
+
         return True
     elif c == '2':
         clear()
